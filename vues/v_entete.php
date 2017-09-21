@@ -1,7 +1,7 @@
 <html>
     
     <link rel="stylesheet" href="css/style.css">
-    <img src="images/avion.png" >
+    <img src="images/fly.jpg" >
 <div id="menu">
    
     <li><a href="index.php?action=Accueil"> Accueil </a></li>
