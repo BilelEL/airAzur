@@ -14,6 +14,13 @@ switch($action)
 	  // vue qui crée le contenu de la page d’accueil
         include("vues/v_accueil.php");
         break;
+    case'catalogue':
+        include("modele/m_fonction.php");
+        $lesVols = getLesVols();
+        
+        include("vues/v_catalogue.php");
+        break;
+        
 }
 
 // vue qui crée le pied de page
