@@ -20,6 +20,11 @@ switch($action)
         
         include("vues/v_catalogue.php");
         break;
+    case'reserver':
+        include'modele/m_fonction.php';
+        $numVols = getReservation();
+        include("vues/v_formulaireReserv.php");
+        break;
         
 }
 

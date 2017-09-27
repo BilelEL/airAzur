@@ -10,7 +10,7 @@
          define('HOST','localhost');
 	 define('DBNAME','airazur');
 	 define('USER','root');
-	 define('PW',"");
+	 define('PW','root');
         ?>
     </body>
 </html>
