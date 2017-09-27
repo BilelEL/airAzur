@@ -14,16 +14,18 @@ switch($action)
 	  // vue qui crée le contenu de la page d’accueil
         include("vues/v_accueil.php");
         break;
-    case'catalogue':
+    case 'catalogue':
         include("modele/m_fonction.php");
         $lesVols = getLesVols();
         
         include("vues/v_catalogue.php");
         break;
-    case'reserver':
-        include'modele/m_fonction.php';
-        $numVols = getReservation();
+    case 'form':
         include("vues/v_formulaireReserv.php");
+    break;
+    case 'validerReservation':
+        include 'modele/m_fonction.php';
+        include'vues/v_confirmeReserv.php';
         break;
         
 }

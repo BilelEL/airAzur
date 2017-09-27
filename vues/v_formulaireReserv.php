@@ -5,7 +5,8 @@
     </head>
     <body>
         <div id="contenu"> 
-            <fieldset>
+            <fieldset>           
+
                 <form action="index.php?action=validerReservation" methode="post">
                     <p><input type="hidden" name="numero" value=<?php echo $numVols?> />
                         
@@ -18,14 +19,13 @@
                         <input type="text" name="adresse" id="adresse" /></p>
                     <p><label for="mail"> Mail: </label>
                         <input type="text" name="mail" id="mail" /></p>
-                    <p><label for="nbVoy"> Nombre de voyageur: </label>
-                        <input type="text" name="nbVoyageur" id="nbVoyageur" /></p>
-                    <p> <input type="submit" values="Valider" /> </p>
-                    <p> <input type="submit" values="Annuler" /> </p>
-                        
+                    <p><label for="nbVoy"> Nombre de voyageurs: </label></br>
+                        <input type="text" name="nbVoyageur" id="nbVoyageur" /></p></br>
+                    <p> <input class= "bouton" type=submit value=Valider /> </p>
+                    <p> <input class= "bouton" type=submit value=Annuler /> </p>
+                       
                 </form>
             </fieldset>
         </div>
     </body>
 </html>
-
