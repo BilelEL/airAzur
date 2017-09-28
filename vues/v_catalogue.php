@@ -27,6 +27,7 @@
 
             echo""
             . "<table>"
+                  ."<fieldset>  "   
                     . "<tr>"
                          . "<td>$numVol</td>"
                     ."</tr>"
@@ -40,10 +41,11 @@
                     ."</tr>"
                     ."<tr>"     
                          ."<td>$prix</td>"
-                         ."<td><a href='index.php?action=form'target='_blank'> reserver </a></td>"
+                         ."<td><a href='index.php?action=form&numVol=numVols'target='_blank'> reserver </a></td>"
                     ."</tr>"
                     ."</br>"
-            ."</table>";
+                   ."</fieldset>"; 
+                 "</table>";
 
             }
             ?>

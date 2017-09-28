@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <meta charset="ISO-8859-1">
@@ -9,7 +10,7 @@
                 <tr>
                     <th>nom</th>
                     <th>prenom</th>
-                    <th>numero de vol</th>
+                    <th>nombre de place</th>
                     <th>pdf</th>
                 </tr>
                 

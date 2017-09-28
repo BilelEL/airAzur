@@ -24,8 +24,7 @@ switch($action)
         include("vues/v_formulaireReserv.php");
     break;
     case 'validerReservation':
-        include 'modele/m_fonction.php';
-        include'vues/v_confirmeReserv.php';
+        include("vues/v_voirReservation.php");
         break;
         
 }
