@@ -20,7 +20,7 @@
                     <p><label for="mail"> Mail: </label>
                         <input type="text" name="mail" id="mail" /></p>
                     <p><label for="nombreVoyageur"> Nombre de voyageurs: </label></br>
-                        <input type="text" name="nbVoyageur" id="nbVoyageur" /></p></br>
+                        <input type="text" name="nombreVoyageur" id="nombreVoyageur" /></p></br>
                     <p> <input class= "bouton" type=submit value=Valider /></a> </p>
                     <p> <input class= "bouton" type=submit value=Annuler /> </p>
                     

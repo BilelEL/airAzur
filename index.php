@@ -23,12 +23,14 @@ switch($action)
     case 'reserver':
         include("modele/m_fonction.php");
         $numero=reserverVol();
+        $lesVols = getLesVols();
         include("vues/v_formulaireReserv.php");
     break;
     case 'validerReservation':
         include("modele/m_fonction.php");
-        $reservation=validerReservation();
+        creerReservation();
         include("vues/v_confirmeReservation.php");
+        break;
     break;
     case 'voirReservation':
         include ("modele/m_fonction.php");
