@@ -16,15 +16,17 @@
                 
 <?php
 foreach ($lesReservations as $reservation){
+    
     $nom=$reservation['nom'];
     $prenom=$reservation['prenom'];
-    $numVol=$reservation['nbVoyageur'];
+    $numero=$reservation['numero'];
+    $nbVoyageur=$reservation['nbVoyageur'];
 ?>
               
                 <tr>
                     <td><?php echo $nom ?></td>
                     <td><?php echo $prenom ?></td>
-                    <td><?php echo $numVols ?></td>
+                    <td><?php echo $numero ?></td>
                     <td><?php echo $nbVoyageur ?></td>
                     
                 </tr>

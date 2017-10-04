@@ -16,7 +16,7 @@
 
             foreach ($lesVols as $unVol)
             {
-                $numVol=$unVol['numVols'];
+                $numero=$unVol['numero'];
                 $numAeroportDepart=$unVol['aeDep'];
                 $numAeroportArrivee=$unVol['aeArr'];
                 $dateDepart=$unVol['dateDepart'];
@@ -29,7 +29,7 @@
             . "<table>"
                   ."<fieldset>  "   
                     . "<tr>"
-                         . "<td>$numVol</td>"
+                         . "<td>$numero</td>"
                     ."</tr>"
                     ."<tr>"
                          ."<td>$numAeroportDepart</td>"
@@ -41,7 +41,7 @@
                     ."</tr>"
                     ."<tr>"     
                          ."<td>$prix</td>"
-                         ."<td><a href='index.php?action=form&numVol=numVols'target='_blank'> reserver </a></td>"
+                         ."<td><a href=index.php?action=reserver&numero=".$numero."> Reserver </a></td>"
                     ."</tr>"
                     ."</br>"
                    ."</fieldset>"; 

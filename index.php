@@ -20,13 +20,21 @@ switch($action)
         
         include("vues/v_catalogue.php");
         break;
-    case 'form':
+    case 'reserver':
+        include("modele/m_fonction.php");
+        $numero=reserverVol();
         include("vues/v_formulaireReserv.php");
     break;
     case 'validerReservation':
+        include("modele/m_fonction.php");
+        $reservation=validerReservation();
+        include("vues/v_confirmeReservation.php");
+    break;
+    case 'voirReservation':
+        include ("modele/m_fonction.php");
+        $lesReservations=getReservation();
         include("vues/v_voirReservation.php");
-        break;
-        
+    break;
 }
 
 // vue qui crée le pied de page
