@@ -5,16 +5,19 @@
         <title></title>
     </head>
     <body>
-        <div id="contenu"> 
-            <table>
+        <div id="bandeau">
+            <h1></h1>
+            <div id="conteneur">
+                <table id="reservations">
                 <tr>
-                    <th>nom</th>
-                    <th>prenom</th>
-                    <th>adresse</th>
-                    <th>mail</th>
-                    <th>nombre de place</th>
-                    <th>numero du vol</th>
-                    <th>pdf</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Adresse</th>
+                    <th>Mail</th>
+                    <th>Nombre de place</th>
+                    <th>Numero de vol</th>
+                    <th>Supprimer</th>
+                    <th>Pdf</th>
                 </tr>
                 
 <?php
@@ -26,6 +29,7 @@ foreach ($lesReservations as $reservation){
     $mail=$reservation['mail'];
     $nombreVoyageur=$reservation['nombreVoyageur'];
     $numero=$reservation['numero'];
+   // $indice=$reservation['No'];
     
 ?>
               
@@ -36,8 +40,8 @@ foreach ($lesReservations as $reservation){
                     <td><?php echo $mail ?></td>
                     <td><?php echo $nombreVoyageur ?></td>
                     <td><?php echo $numero ?></td>
-                    
-                    <td></td>
+                    <td><a href=index.php?action=supprimerReservation&numReservation=".$numero."><img src='images/suprimer.jpg'></a></td>
+                    <td><a href=index.php?action=pdfReservation&numReservation=".$numero."><img src='images/PDF_icon.jpg'></a></td>
                 </tr>
 <?php
 

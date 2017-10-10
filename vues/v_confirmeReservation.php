@@ -16,7 +16,7 @@
                 <input type="hidden" name="prenom" value=<?php echo $prenom;?> /> 
 
                 <legend> La réservation pour le vol n°<?php echo $numero;?> est confirmé pour le client <?php echo $prenom ." ". $nom ;?>  </legend>
-                <input type="submit" value="valider" name="valider" />
+                
             </form>
         </div>
     </body>   

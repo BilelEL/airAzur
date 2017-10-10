@@ -1,5 +1,6 @@
 
 <?php
+
 if(!isset($_REQUEST['action']))
     $action = 'accueil';
 else
@@ -37,6 +38,15 @@ switch($action)
         $lesReservations=getReservation();
         include("vues/v_voirReservation.php");
     break;
+    /*case 'pdfReservation':
+        include ("modele/m_fonction.php");
+        $numero = $_REQUEST['numReservation'];
+        $reservations= getReservation($numero);
+        include ("vues/v_pdf_reservation.php");
+        $res=creerPdfReservation ($reservation);
+        break;*/
+
+
 }
 
 // vue qui crée le pied de page

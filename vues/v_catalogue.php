@@ -1,10 +1,13 @@
 <html>
     <head>
-        <meta charset="ISO-8859-1">
+        <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <div id="contenu"> 
+        <div id="bandeau">
+          <h1></h1>
+        <div id="conteneur"> 
+        
     
             <?php
             
@@ -27,7 +30,7 @@
 
             echo""
             . "<table>"
-                  ."<fieldset>  "   
+                    ."</br><div id='style'></div>"
                     . "<tr>"
                          . "<td>$numero</td>"
                     ."</tr>"
@@ -40,7 +43,7 @@
                          ."<td>$dateArrivee</td>"
                     ."</tr>"
                     ."<tr>"     
-                         ."<td>$prix</td>"
+                         ."<td>$prix euros</td>"
                          ."<td><a href=index.php?action=reserver&numero=".$numero."> Reserver </a></td>"
                     ."</tr>"
                     ."</br>"

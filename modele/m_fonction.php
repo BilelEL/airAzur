@@ -153,6 +153,7 @@
 
         $nbVoyageur = $_REQUEST["nombreVoyageur"];
         $reservation["nombreVoyageur"] =  $nombreVoyageur;
+        
     }
 
     // fonction qui initialise le panier
@@ -166,5 +167,58 @@
     function ajouterAuPanier($reservation) {    
         $_SESSION['reservations'][]= $reservation;
     }
+    
+    function supprimerReservation() {
+        require dirname(__FILE__). "/connect.php";
+        // ouverture du fichier en écriture (mode w)
+
+        $nom=$_POST['nom'];
+        $prenom=$_POST['prenom'];
+        $adresse=$_POST['adresse'];
+        $mail=$_POST['mail'];
+        $nombreVoyageur=$_POST['nombreVoyageur'];
+        $numero=$_POST['numero'];
+
+        $requete="delete from reservation where 'nom'='$nom' "; 
+          $bdd= connect();
+        $i=0;
+        try 
+        {   
+            $sql = $bdd->prepare($requete);
+            $sql->execute();
+        }
+
+        catch(PDOException $e)
+        {
+            echo "Erreur dans la requ�te" . $e->getMessage();
+        }
+    }
+    
 ?>
+<?php
+    function creerPdfReservation($reservation){
+        //permet d'inclure la bibli fpdf
+        require('fpdf/fpdf.php');
+        //instancie un objet de type FPDF qui permet de créer le PDF
+        $pdf=new FPDF();
+        //ajoute une page
+        $pdf->AddPage();
+        //définit la police courante
+        $pdf->SetFont('Arial','',16);
+        //affiche un image
+        $pdf->Image('../images/avion1.jpg',10,10, 64, 48);
+        //affiche du texte
+        $pdf->Cell(40,110,'Reservation: ');
+        $pdf->Ln(5);
+        $pdf->Cell(40,115,'Client: '.$reservation['nom']. " ".$reservation['prenom']);
+        $pdf->Ln(5);
+        $pdf->Cell(40,120,'Numero de vol: '.$reservation['numero']);
+        $pdf->Ln(5); 
+        $pdf->Cell(40,125,'Nombre de personne: '.$reservation['nbVoyageur']);
+        //Enfin, le document est termnié et envoyé au navigateur grâce à Output()
+        $pdf->Output();
+    }
+?>
+    
+
 
